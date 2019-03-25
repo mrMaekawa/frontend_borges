@@ -1,0 +1,85 @@
+* {-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;}
+body{background:rgb(169,226,193);background:linear-gradient(180deg, rgba(169,226,193,1) 0%, rgba(164,228,237,1) 90%, rgba(164,228,237,1) 95%, rgba(169,226,193,1) 100%);}
+h1,h2,h3{font-family:'Quicksand',sans-serif;font-weight:normal;font-style:normal;}
+h4,h5,h6,p{font-family:'Montserrat',sans-serif;font-weight:normal;font-style:normal;}
+.oculto{display:none;}
+.material-icons {font-family: 'Material Icons';font-weight: normal;font-style:normal;display:inline-block;text-transform: none;letter-spacing: normal;word-wrap: normal;white-space: nowrap;direction: ltr;-webkit-font-smoothing: antialiased;text-rendering: optimizeLegibility;-moz-osx-font-smoothing: grayscale;font-feature-settings: 'liga';}
+#geral{padding:0;margin:0;width:100%;}
+#geral > .container{width:96vw;height:37.531vw;margin:0 auto;padding:1.2vw 1.83vw 0 1.83vw;border-radius:0.293vw;background-color:#FFFFFF;overflow:hidden;position:relative;}
+#geral > header.container{height:7.906vw;margin:2vw auto 0.7vw auto;}
+#geral > header h1{float:left;font-size:3.075vw;line-height:1;color:rgba(31,32,65,1);text-align:left;}
+#geral > header h3{float:right;clear:both;font-size:1.757vw;line-height:1.95vw;font-weight:bold;color:rgba(31,32,65,1);text-align:right;}
+#geral > header h4{float:right;clear:both;font-size:1.025vw;line-height:1.757vw;color:rgba(31,32,65,0.75);text-align:right;}
+#geral > header h4 a{text-decoration:none;color:rgba(31,32,65,0.75);}
+#geral > header h4 span{margin:0 1.7vw;}
+
+#geral nav{width:24.671vw;height:3.221vw;position:relative;float:left;}
+#geral nav div{position:absolute;left:0;bottom:0;height:.22vw;min-height:3px;width:100%;}
+#geral nav div:after{height:.22vw;min-height:3px;width:13vw;position:absolute;top:0;left:0;content:"";display:block;background:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);border-radius:.22vw;transition:left ease-out .6s,width ease-out .6s;}
+#geral nav div:before{height:.073vw;min-height:1px;width:100%; position: relative;top: 50%;transform: perspective(1px) translateY(-50%);background-color:rgba(31,32,65,.1);content:"";display:block;}
+#geral nav label{font-family:'Quicksand',sans-serif;font-weight:normal;font-size:1.391vw;clear:none;color:rgba(31,32,65,0.5);}
+#geral nav .label_tab00{float:left;text-align:left;font-weight:bold;color:rgba(31,32,65,1);}
+#geral nav .label_tab01{float:left;text-align:left;transition:font-weight .2s ease-out .5s,color .2s ease-out .5s;}
+#geral nav .label_tab02{float:right;text-align:right;transition:font-weight .2s ease-out .5s,color .2s ease-out .5s;}
+#geral section{width:85.652vw;height:28vw;position:absolute;left:-100vw;top:8.638vw;animation-duration: .5s;animation-timing-function:ease; animation-delay:.2s;animation-fill-mode: forwards;}
+#geral #input_tab00:checked ~ nav .label_tab00{display:block;}
+#geral #input_tab00:checked ~ nav .label_tab01{display:none;}
+#geral #input_tab00:checked ~ nav .label_tab02{cursor:hand;cursor:pointer;}
+#geral #input_tab00:checked ~ nav .label_tab02:hover{color:rgba(31,32,65,0.75);}
+#geral #input_tab00:checked ~ #section_tab01{left:4.685vw;}
+#geral #input_tab01:checked ~ nav .label_tab01{font-weight:bold;color:rgba(31,32,65,1);}
+#geral #input_tab01:checked ~ nav .label_tab02{cursor:hand;cursor:pointer;}
+#geral #input_tab01:checked ~ nav .label_tab02:hover{color:rgba(31,32,65,0.75);}
+#geral #input_tab01:checked ~ nav div:after{width:13vw;left:0;}
+#geral #input_tab01:checked ~ #section_tab01{animation-name:sectionEntraE;}
+#geral #input_tab01:checked ~ #section_tab02{left:4.685vw;animation-name:sectionSaiD;}
+#geral #input_tab02:checked ~ nav .label_tab02{font-weight:bold;color:rgba(31,32,65,1);}
+#geral #input_tab02:checked ~ nav .label_tab01{cursor:hand;cursor:pointer;}
+#geral #input_tab02:checked ~ nav .label_tab01:hover{color:rgba(31,32,65,0.75);}
+#geral #input_tab02:checked ~ nav div:after{width:10.6vw;left:14.227vw;}
+#geral #input_tab02:checked ~ #section_tab02{animation-name:sectionEntraD;}
+#geral #input_tab02:checked ~ #section_tab01{left:4.685vw;animation-name:sectionSaiE;}
+@keyframes sectionEntraE{0%{left:-50vw;opacity:0;}100%{left:4.685vw;opacity:1;}}
+@keyframes sectionEntraD{0%{left: 50vw;opacity:0;}100%{left:4.685vw;opacity:1;}}
+@keyframes sectionSaiE{0%{left:4.685vw;opacity:1;}99%{left:-50vw;opacity:0;}100%{left:-100vw;opacity:0;}}
+@keyframes sectionSaiD{0%{left:4.685vw;opacity:1;}99%{left: 50vw;opacity:0;}100%{left:-100vw;opacity:0;}}
+
+#geral #section_tab01 > p{font-size:1.025vw;line-height:1.757vw;color:rgba(31,32,65,0.75);text-align:left;margin-bottom:0.343vw;}
+#geral #section_tab01 fieldset{border:none;border:none;width:28vw;height:7vw;float:left;clear:none;margin:1vw 0 0 0;}
+#geral #section_tab01 fieldset label{display:block;width:100%;margin:0 0 1vw 0;font-family:Montserrat;font-style:normal;font-weight:bold;font-size:.878vw;line-height:1vw;text-transform:uppercase;color: #1F2041;}
+#geral #section_tab01 fieldset .caixa_texto{width:23.426vw;height:3.221vw;background: #FFFFFF;border-radius:.293vw;border: 1px solid rgba(31, 32, 65, 0.25);}
+#geral #section_tab01 fieldset .caixa_texto:hover{border: 1px solid rgba(31, 32, 65, 0.5);}
+#geral #section_tab01 fieldset .caixa_texto:before{width:3.221vw;height:3.221vw;color:rgba(31, 32, 65, 0.25);font-size:1.757vw;line-height: 3.221vw;font-family: 'Material Icons';font-weight: normal;font-style:normal;text-transform: none;letter-spacing: normal;word-wrap: normal;white-space: nowrap;direction: ltr;-webkit-font-smoothing: antialiased;text-rendering: optimizeLegibility;-moz-osx-font-smoothing: grayscale;font-feature-settings: 'liga';}
+#geral #section_tab01 fieldset .caixa_texto:hover:before{color:rgba(31, 32, 65, 0.5);}
+#geral #section_tab01 fieldset .caixa_texto input.input_texto{width:19vw;height:3.221vw;background:transparent;border:none;font-family: Montserrat;font-style: normal;font-weight: normal;font-size:1.025vw;line-height: 3.221vw;color: rgba(31, 32, 65, 0.5);float:left;}
+#geral #section_tab01 fieldset .caixa_texto input.input_texto:focus{color: rgba(31, 32, 65, 0.75);border:none; box-shadow: none;outline-color: transparent;}
+#geral #section_tab01 .field_nome{width:56vw;}
+#geral #section_tab01 .field_nome .caixa_texto{width:51.4vw;}
+#geral #section_tab01 .field_nome .caixa_texto input{width:47vw;}
+#geral #section_tab01 .field_nome .caixa_texto:before{content:"person";display:block;float:left;text-align:center;}
+#geral #section_tab01 .field_tel .caixa_texto:before{content:"phone";display:block;float:left;text-align:center;}
+#geral #section_tab01 .field_email .caixa_texto:before{content:"email";display:block;float:left;text-align:center;}
+#geral #section_tab01 .field_nascimento .caixa_texto:before{content:"today";display:block;float:left;text-align:center;}
+#geral #section_tab01 .field_cpf .caixa_texto:before{content:"credit_card";display:block;float:left;text-align:center;}
+#geral #section_tab01 .field_status{width:24vw;position:relative;}
+#geral #section_tab01 .field_status div{position:relative;z-index:1;width:inherit;height:inherit;}
+#geral #section_tab01 .field_status div:before{position:absolute;width:2.928vw;height:1.464vw;left:0.243vw;top:2.68vw;background:#FFFFFF;border:1px solid #BC9CFF;box-sizing:border-box;border-radius:0.732vw;transition:border .3s ease;content:"";display:block;}
+#geral #section_tab01 .field_status div:after{position:absolute;width:0.878vw;height:0.878vw;left:2vw;top:3vw;background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);border-radius: 0.732vw;transition:left .3s ease, background .3s ease;content:"";display:block;}
+#geral #section_tab01 .field_status label{position:absolute;z-index:10;top:2.6vw;left:0;height:3vw;line-height:3vw;text-indent:6vw;cursor:hand;cursor:pointer;display:none;}
+#geral #section_tab01 .field_status #frm_status01:checked ~ div:before{border:1px solid #BC9CFF;}
+#geral #section_tab01 .field_status #frm_status01:checked ~ div:after{left:2vw;background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);}
+#geral #section_tab01 .field_status #frm_status01:checked ~ label.label_status02{display:block;}
+#geral #section_tab01 .field_status #frm_status02:checked ~ div:before{border:1px solid rgba(31, 32, 65, 0.25);}
+#geral #section_tab01 .field_status #frm_status02:checked ~ div:after{left:.636vw;background:linear-gradient(180deg, rgba(31, 32, 65, 0.25) 0%, rgba(31, 32, 65, 0.25) 100%);;}
+#geral #section_tab01 .field_status #frm_status02:checked ~ label.label_status01{display:block;}
+#geral #section_tab01 .field_genero label{margin-top:3vw;line-height:1.464vw;width:10vw;float:left;clear:none;cursor:hand;cursor:pointer;}
+#geral #section_tab01 .field_genero label div{width:1.464vw;height:1.464vw;position:relative;float:left;margin:0 1vw 0 0;box-sizing:border-box;}
+#geral #section_tab01 .field_genero label div:after{width:1.464vw;height:1.464vw;position:absolute;left:0;top:0;background:transparent;border:.073vw solid #BC9CFF;border-radius:50%;content:"";display:block;box-sizing:border-box;}
+#geral #section_tab01 .field_genero label div:before{width:.878vw;height:.878vw;position:absolute;left:.293vw;top:.293vw;background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);border-radius:50%;content:"";display:none;}
+#geral #section_tab01 .field_genero #frm_genero01:checked ~ label.label_genero01 div:before{display:block;}
+#geral #section_tab01 .field_genero #frm_genero02:checked ~ label.label_genero02 div:before{display:block;}
+#geral #section_tab01 button{position:relative;float:right;clear:none;width:10.688vw;height:3.367vw;background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);border:none;border-radius:1.684vw;margin-top:5vw;cursor:hand;cursor:pointer;}
+#geral #section_tab01 button:before{width:10.249vw;height:3vw;position:absolute;z-index:1;top:.22vw;left:.22vw;background: #FFFFFF;border-radius:1.464vw;content:"";display:block;}
+#geral #section_tab01 button:after{width:10.249vw;height:3vw;position:absolute;z-index:2;top:.22vw;left:.22vw;font-family: Montserrat;font-style: normal;font-weight: bold;font-size:.878vw;line-height: 2.928vw;text-align: center;text-transform: uppercase;color: #6FCF97;content:"Criar Contato";}
+#geral #section_tab01 button:hover:after{color:#FFFFFF;;}
+#geral #section_tab01 button:hover:before{display:none;}
